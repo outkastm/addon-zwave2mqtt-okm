@@ -15,7 +15,7 @@ RUN \
         npm=12.15.0-r1 \
         python2-dev~=2.7 \
         yarn=1.19.2-r0 \
-        coreutils \
+        coreutils=8.31-r0 \
     \
     && apk add --no-cache \
         eudev=3.2.9-r1 \
@@ -25,7 +25,7 @@ RUN \
         nginx=1.16.1-r6 \
         nodejs=12.15.0-r1 \
         openssl=1.1.1g-r0 \
-	\
+    \
 	&& OPENZWAVE_VER=1.6.1123 \
 	&& mkdir /tmp/openzwavelib \
 	&& curl -J -L -o /tmp/openzwavelib.tar.gz \
@@ -37,7 +37,7 @@ RUN \
 	&& echo "start build openzavelib" \
 	&& make #-j6 \
 	&& echo "start install openzavelib" \
-	&& make install PREFIX=/usr \	
+	&& make install PREFIX=/usr \
 	&& echo "copy database" \
     && rm -f -r /etc/openzwave \
     && mkdir -p /etc/openzwave \
@@ -45,7 +45,7 @@ RUN \
     \
 	&& echo "download zwave2mqtt" \
     && curl -J -L -o /tmp/zwave2mqtt.tar.gz \
-        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.2.0.tar.gz" \
+        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.2.1.tar.gz" \
     && tar zxvf \
         /tmp/zwave2mqtt.tar.gz \
         --strip 1 -C /opt \
@@ -77,7 +77,7 @@ RUN \
         /usr/local/share/.cache
 
 # Copy root filesystem
-COPY /zwave2mqtt/rootfs /
+COPY rootfs /
 
 # Build arguments
 ARG BUILD_ARCH
@@ -100,7 +100,7 @@ LABEL \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="" \
     org.opencontainers.image.source="https://github.com/outkastm/my-hassio-addons" \
-    org.opencontainers.image.documentation="https://github.com/outkastm/my-hassio-addons/blob/master/zwave2mqtt-dev/README.md" \
+    org.opencontainers.image.documentation="https://github.com/outkastm/my-hassio-addons/blob/master/zwave2mqtt-okm/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
