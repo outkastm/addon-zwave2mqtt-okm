@@ -1,4 +1,4 @@
-﻿ARG BUILD_FROM=hassioaddons/base:7.2.0
+ARG BUILD_FROM=hassioaddons/base:7.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -104,3 +104,4 @@ LABEL \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
+	
