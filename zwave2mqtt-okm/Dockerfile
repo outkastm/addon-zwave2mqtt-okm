@@ -45,7 +45,7 @@ RUN \
     \
     && echo "download zwave2mqtt" \
     && curl -J -L -o /tmp/zwave2mqtt.tar.gz \
-        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.2.2.tar.gz"  \
+        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.2.1.tar.gz" \
     && tar zxvf \
         /tmp/zwave2mqtt.tar.gz \
         --strip 1 -C /opt \
@@ -104,4 +104,3 @@ LABEL \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
-	
