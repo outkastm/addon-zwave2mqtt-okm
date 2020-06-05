@@ -1,5 +1,5 @@
 ---
-include: https://raw.githubusercontent.com/outkastm/my-hassio-addons/master/addon.yml
+include: https://raw.githubusercontent.com/outkastm/my-hassio-addons/master/addon_pipeline.yml
 
 variables:
   ADDON_GITHUB_REPO: "outkastm/addon-zwave2mqtt-okm"
