@@ -26,7 +26,7 @@ RUN \
         nodejs=12.15.0-r1 \
         openssl=1.1.1g-r0 \
     \
-    && OPENZWAVE_VER=1.6.1123 \
+    && OPENZWAVE_VER=1.6.1136 \
     && mkdir /tmp/openzwavelib \
     && curl -J -L -o /tmp/openzwavelib.tar.gz \
         "http://old.openzwave.com/downloads/openzwave-${OPENZWAVE_VER}.tar.gz" \
