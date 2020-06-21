@@ -26,7 +26,7 @@ RUN \
         nodejs=12.15.0-r1 \
         openssl=1.1.1g-r0 \
     \
-    && OPENZWAVE_VER=1.6.1136 \
+    && OPENZWAVE_VER=1.6.1149 \
     && mkdir /tmp/openzwavelib \
     && curl -J -L -o /tmp/openzwavelib.tar.gz \
         "http://old.openzwave.com/downloads/openzwave-${OPENZWAVE_VER}.tar.gz" \
@@ -45,7 +45,7 @@ RUN \
     \
     && echo "download zwave2mqtt" \
     && curl -J -L -o /tmp/zwave2mqtt.tar.gz \
-        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.2.2.tar.gz" \
+        "https://github.com/OpenZWave/Zwave2Mqtt/archive/v3.3.0.tar.gz" \
     && tar zxvf \
         /tmp/zwave2mqtt.tar.gz \
         --strip 1 -C /opt \

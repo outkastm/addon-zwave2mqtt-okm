@@ -1,13 +1,13 @@
 {
   "name": "Z-Wave to MQTT ",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "slug": "zwave2mqtt-okm",
   "description": "Fully configurable Z-Wave to MQTT gateway and control panel",
   "url": "https://github.com/outkastm/my-hassio-addons/addon-zwave2mqtt-okm",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:8091]",
   "startup": "system",
   "init": false,
-  "arch": ["amd64", "armv7"],
+  "arch": "armv7",
   "ports": {
     "8091/tcp": 8091
   },
