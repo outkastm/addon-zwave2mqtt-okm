@@ -9,21 +9,21 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r1 \
-        git=2.24.3-r0 \
-        linux-headers=4.19.36-r0 \
-        npm=12.15.0-r1 \
+        build-base=0.5-r2 \
+        git=2.26.2-r0 \
+        linux-headers=5.4.5-r1 \
+        npm=12.17.0-r0 \
         python2-dev~=2.7 \
-        yarn=1.19.2-r0 \
-        coreutils=8.31-r0 \
+        yarn=1.22.4-r0 \
+        coreutils=8.32-r0 \
     \
     && apk add --no-cache \
-        eudev=3.2.9-r1 \
+        eudev=3.2.9-r3 \
         libusb=1.0.23-r0 \
         lua-resty-http=0.15-r0 \
-        nginx-mod-http-lua=1.16.1-r6 \
-        nginx=1.16.1-r6 \
-        nodejs=12.15.0-r1 \
+        nginx-mod-http-lua=1.18.0-r1 \
+        nginx=1.18.0-r1 \
+        nodejs=12.18.0-r2 \
         openssl=1.1.1g-r0 \
     \
     && OPENZWAVE_VER=1.6.1149 \
