@@ -12,7 +12,7 @@ RUN \
         build-base=0.5-r2 \
         git=2.26.2-r0 \
         linux-headers=5.4.5-r1 \
-        npm=12.18.3-r0 \
+        npm=12.18.4-r0 \
         python2-dev~=2.7 \
         yarn=1.22.4-r0 \
         coreutils=8.32-r0 \
