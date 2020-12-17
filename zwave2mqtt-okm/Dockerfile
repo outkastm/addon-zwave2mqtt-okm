@@ -24,7 +24,7 @@ RUN \
         nginx-mod-http-lua=1.18.0-r1 \
         nginx=1.18.0-r1 \
         nodejs=12.18.4-r0 \
-        openssl=1.1.1g-r0 \
+        openssl=1.1.1i-r0 \
     \
     && OPENZWAVE_VER=1.6.1570 \
     && mkdir /tmp/openzwavelib \
